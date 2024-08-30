@@ -2,6 +2,7 @@
 
 namespace ilateral\SilverStripe\Reviews\Extensions;
 
+use SilverStripe\Comments\Model\Comment;
 use SilverStripe\ORM\DataExtension;
 use ilateral\SilverStripe\Reviews\Helpers\ReviewHelper;
 use SilverStripe\Forms\FieldList;
@@ -62,7 +63,7 @@ class CommentExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        /** @var \SilverStripe\Comments\Model\Comment */
+        /** @var Comment */
         $owner = $this->getOwner();
 
         $fields->insertBefore(

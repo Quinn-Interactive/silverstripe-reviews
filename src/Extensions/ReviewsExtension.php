@@ -128,10 +128,7 @@ class ReviewsExtension extends DataExtension
         // return back the same variables as previously done in comments
         return $this
             ->owner
-            ->customise(array(
-                'AddCommentForm' => $form,
-                'ModeratedSubmitted' => $moderatedSubmitted,
-            ))
+            ->customise(['AddCommentForm' => $form, 'ModeratedSubmitted' => $moderatedSubmitted])
             ->renderWith('ReviewsInterface');
     }   
 }
